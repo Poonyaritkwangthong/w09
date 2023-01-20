@@ -34,7 +34,7 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>เพิ่มข้อมูลคำนำหน้าชื่อ</h4>    
+                <h4>เพิ่มข้อมูลคำนำหน้าสถานะ</h4>    
                 <?php
                     if(isset($_GET['submit'])){
                         $pst_name = $_GET['pst_name'];
@@ -49,7 +49,7 @@
                 ?>
                     <form class="form-horizontal" role="form" name="project_status_add" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <div class="form-group">
-                            <label for="pst_name" class="col-md-2 col-lg-2 control-label">คำนำหน้าชื่อ</label>
+                            <label for="pst_name" class="col-md-2 col-lg-2 control-label">สถานะโครงงาน</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="pst_name" id="pst_name" class="form-control">
                             </div>    

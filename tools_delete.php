@@ -22,8 +22,8 @@
     <body>        
         <?php
             include 'connectdb.php';
-            $ttl_id = $_GET['ttl_id'];
-            $sql = "delete from title where ttl_id='$ttl_id'";
+            $tls_id = $_GET['tls_id'];
+            $sql = "delete from tools where tls_id='$tls_id'";
             $result = mysqli_query($conn,$sql);
             if($result){
                 echo 'ลบแล้ว';

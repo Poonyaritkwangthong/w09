@@ -35,7 +35,7 @@
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
                     <h2>เครื่่องมือ</h2>
-                    <a href="title_add.php" class="btn btn-link">เพิ่มเครื่องมือ</a>
+                    <a href="tools_add.php" class="btn btn-link">เพิ่มเครื่องมือ</a>
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>

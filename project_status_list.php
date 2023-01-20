@@ -54,7 +54,7 @@
                                     echo '<td>' . $row['pst_name'] . '</td>';
                                     echo '<td>';
                             ?>
-                                <a href="pst_edit.php?pst_id=<?php echo $row['pst_id'];?>" class="btn btn-warning">แก้ไข</a>
+                                <a href="project_status_edit.php?pst_id=<?php echo $row['pst_id'];?>" class="btn btn-warning">แก้ไข</a>
                                 <a href="JavaScript:if(confirm('ยืนยันการลบ')==true){window.location='project_status_delete.php?pst_id=<?php echo $row["pst_id"];?>'}" class="btn btn-danger">ลบ</a>
                             <?php
                                     echo '</td>';

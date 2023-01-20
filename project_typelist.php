@@ -54,7 +54,7 @@
                                     echo '<td>' . $row['ptt_name'] . '</td>';
                                     echo '<td>';
                             ?>
-                                <a href="ptt_edit.php?ptt_id=<?php echo $row['ptt_id'];?>" class="btn btn-warning">แก้ไข</a>
+                                <a href="project_typeedit.php?ptt_id=<?php echo $row['ptt_id'];?>" class="btn btn-warning">แก้ไข</a>
                                 <a href="JavaScript:if(confirm('ยืนยันการลบ')==true){window.location='project_typedelete.php?ptt_id=<?php echo $row["ptt_id"];?>'}" class="btn btn-danger">ลบ</a>
                             <?php
                                     echo '</td>';

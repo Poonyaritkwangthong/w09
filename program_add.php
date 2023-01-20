@@ -34,7 +34,7 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>เพิ่มข้อมูลคำนำหน้าชื่อ</h4>    
+                <h4>เพิ่มข้อมูลสาขา</h4>    
                 <?php
                     if(isset($_GET['submit'])){
                         $prg_name = $_GET['prg_name'];
@@ -49,7 +49,7 @@
                 ?>
                     <form class="form-horizontal" role="form" name="program_add" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <div class="form-group">
-                            <label for="prg_name" class="col-md-2 col-lg-2 control-label">คำนำหน้าชื่อ</label>
+                            <label for="prg_name" class="col-md-2 col-lg-2 control-label">ชื่อสาขา</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="prg_name" id="prg_name" class="form-control">
                             </div>    

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <project>php-id-w10</project>
+        <title>php-id-w10</title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>เพิ่มข้อมูลคำนำหน้าชื่อ</h4>    
+                <h4>เพิ่มข้อมูลประเภทโครงงาน</h4>    
                 <?php
                     if(isset($_GET['submit'])){
                         $ptt_name = $_GET['ptt_name'];
@@ -49,7 +49,7 @@
                 ?>
                     <form class="form-horizontal" role="form" name="project_add" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <div class="form-group">
-                            <label for="ptt_name" class="col-md-2 col-lg-2 control-label">คำนำหน้าชื่อ</label>
+                            <label for="ptt_name" class="col-md-2 col-lg-2 control-label">ประเภทโครงงาน</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="ptt_name" id="ptt_name" class="form-control">
                             </div>    

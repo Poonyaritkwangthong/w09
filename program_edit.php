@@ -34,20 +34,20 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>แก้ไขข้อมูลเครื่องมือ</h4>    
+                <h4>แก้ไขข้อมูลสาขา</h4>    
                 <?php
                     include 'connectdb.php';
                     if(isset($_GET['submit'])){
                         $prg_id     = $_GET['prg_id'];
                         $prg_name   = $_GET['prg_name'];
-                        $sql        = "update project_status set prg_name='$prg_name' where prg_id='$prg_id'";
+                        $sql        = "update program set prg_name='$prg_name' where prg_id='$prg_id'";
                         mysqli_query($conn,$sql);
                         mysqli_close($conn);
                         echo "แก้ไข $prg_name เรียบร้อยแล้ว<br>";
-                        echo '<a href="project_status_list.php">แสดงเครื่องมือทั้งหมด</a>';
+                        echo '<a href="program_list.php">แสดงเครื่องมือทั้งหมด</a>';
                     }else{
                         $fprg_id = $_REQUEST['prg_id'];
-                        $sql =  "SELECT * FROM project_status where prg_id='$fprg_id'";
+                        $sql =  "SELECT * FROM program where prg_id='$fprg_id'";
                         $result = mysqli_query($conn,$sql);
                         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                         $fprg_name = $row['prg_name'];
@@ -57,7 +57,7 @@
                     <form class="form-horizontal" role="form" name="project_edit" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <input type="hidden" name="prg_id" id="prg_id" value="<?php echo "$fprg_id";?>">
                         <div class="form-group">
-                            <label for="prg_name" class="col-md-2 col-lg-2 control-label">ชื่อเครื่องมือ</label>
+                            <label for="prg_name" class="col-md-2 col-lg-2 control-label">ชื่อสาขา</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="prg_name" id="prg_name" class="form-control" value="<?php echo "$fprg_name";?>">
                             </div>    

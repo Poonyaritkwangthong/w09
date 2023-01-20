@@ -57,7 +57,7 @@
                     <form class="form-horizontal" role="form" name="project_edit" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <input type="hidden" name="pst_id" id="pst_id" value="<?php echo "$fpst_id";?>">
                         <div class="form-group">
-                            <label for="pst_name" class="col-md-2 col-lg-2 control-label">ชื่อเครื่องมือ</label>
+                            <label for="pst_name" class="col-md-2 col-lg-2 control-label">สถานะโครงงาน</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="pst_name" id="pst_name" class="form-control" value="<?php echo "$fpst_name";?>">
                             </div>    

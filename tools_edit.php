@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>php-id-w10-title-edit</title>
+        <title>php-id-w10-tools-edit</title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
@@ -34,32 +34,32 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>แก้ไขข้อมูลคำนำหน้าชื่อ</h4>    
+                <h4>แก้ไขข้อมูลชื่อเครื่องมือ</h4>    
                 <?php
                     include 'connectdb.php';
                     if(isset($_GET['submit'])){
-                        $ttl_id     = $_GET['ttl_id'];
-                        $ttl_name   = $_GET['ttl_name'];
-                        $sql        = "update title set ttl_name='$ttl_name' where ttl_id='$ttl_id'";
+                        $tls_id     = $_GET['tls_id'];
+                        $tls_name   = $_GET['tls_name'];
+                        $sql        = "update tools set tls_name='$tls_name' where tls_id='$tls_id'";
                         mysqli_query($conn,$sql);
                         mysqli_close($conn);
-                        echo "เพิ่มคำนำหน้า $ttl_name เรียบร้อยแล้ว<br>";
-                        echo '<a href="title_list.php">แสดงคำนำหน้าชื่อทั้งหมด</a>';
+                        echo "เพิ่มคำนำหน้า $tls_name เรียบร้อยแล้ว<br>";
+                        echo '<a href="tools_list.php">แสดงคำนำหน้าชื่อทั้งหมด</a>';
                     }else{
-                        $fttl_id = $_REQUEST['ttl_id'];
-                        $sql =  "SELECT * FROM title where ttl_id='$fttl_id'";
+                        $ftls_id = $_REQUEST['tls_id'];
+                        $sql =  "SELECT * FROM tools where tls_id='$ftls_id'";
                         $result = mysqli_query($conn,$sql);
                         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                        $fttl_name = $row['ttl_name'];
+                        $ftls_name = $row['tls_name'];
                         mysqli_free_result($result);
                         mysqli_close($conn);                        
                 ?>
-                    <form class="form-horizontal" role="form" name="title_edit" action="<?php echo $_SERVER['PHP_SELF']?>">
-                        <input type="hidden" name="ttl_id" id="ttl_id" value="<?php echo "$fttl_id";?>">
+                    <form class="form-horizontal" role="form" name="tools_edit" action="<?php echo $_SERVER['PHP_SELF']?>">
+                        <input type="hidden" name="tls_id" id="tls_id" value="<?php echo "$ftls_id";?>">
                         <div class="form-group">
-                            <label for="ttl_name" class="col-md-2 col-lg-2 control-label">คำนำหน้าชื่อ</label>
+                            <label for="tls_name" class="col-md-2 col-lg-2 control-label">ชื่อเครื่องมือ</label>
                             <div class="col-md-10 col-lg-10">
-                                <input type="text" name="ttl_name" id="ttl_name" class="form-control" value="<?php echo "$fttl_name";?>">
+                                <input type="text" name="tls_name" id="tls_name" class="form-control" value="<?php echo "$ftls_name";?>">
                             </div>    
                         </div>
                         <div class="form-group">

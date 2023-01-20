@@ -34,7 +34,7 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>แก้ไขข้อมูลเครื่องมือ</h4>    
+                <h4>แก้ไขข้อมูลประเภทโครงงาน</h4>    
                 <?php
                     include 'connectdb.php';
                     if(isset($_GET['submit'])){
@@ -57,7 +57,7 @@
                     <form class="form-horizontal" role="form" name="project_edit" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <input type="hidden" name="ptt_id" id="ptt_id" value="<?php echo "$fptt_id";?>">
                         <div class="form-group">
-                            <label for="ptt_name" class="col-md-2 col-lg-2 control-label">ชื่อเครื่องมือ</label>
+                            <label for="ptt_name" class="col-md-2 col-lg-2 control-label">ประเภทโครงงาน</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="ptt_name" id="ptt_name" class="form-control" value="<?php echo "$fptt_name";?>">
                             </div>    

@@ -34,7 +34,7 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>แก้ไขข้อมูลเครื่องมือ</h4>    
+                <h4>แก้ไขข้อมูลคำนำหน้าชื่อ</h4>    
                 <?php
                     include 'connectdb.php';
                     if(isset($_GET['submit'])){
@@ -57,7 +57,7 @@
                     <form class="form-horizontal" role="form" name="title_edit" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <input type="hidden" name="ttl_id" id="ttl_id" value="<?php echo "$fttl_id";?>">
                         <div class="form-group">
-                            <label for="ttl_name" class="col-md-2 col-lg-2 control-label">ชื่อเครื่องมือ</label>
+                            <label for="ttl_name" class="col-md-2 col-lg-2 control-label">คำนำหน้าชื่อ</label>
                             <div class="col-md-10 col-lg-10">
                                 <input type="text" name="ttl_name" id="ttl_name" class="form-control" value="<?php echo "$fttl_name";?>">
                             </div>    

@@ -40,7 +40,7 @@
                         <thead>
                             <tr>
                                 <th>รหัส</th>
-                                <th colspan="2">สาขาโครงงาน</th>
+                                <th colspan="2">สาขา</th>
                             </tr>                
                         </thead>
                         <tbody>
@@ -54,7 +54,7 @@
                                     echo '<td>' . $row['prg_name'] . '</td>';
                                     echo '<td>';
                             ?>
-                                <a href="prg_edit.php?prg_id=<?php echo $row['prg_id'];?>" class="btn btn-warning">แก้ไข</a>
+                                <a href="program_edit.php?prg_id=<?php echo $row['prg_id'];?>" class="btn btn-warning">แก้ไข</a>
                                 <a href="JavaScript:if(confirm('ยืนยันการลบ')==true){window.location='program_delete.php?prg_id=<?php echo $row["prg_id"];?>'}" class="btn btn-danger">ลบ</a>
                             <?php
                                     echo '</td>';
