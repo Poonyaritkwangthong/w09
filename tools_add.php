@@ -37,20 +37,44 @@
                 <h4>เพิ่มเครื่องมือ</h4>    
                 <?php
                     if(isset($_GET['submit'])){
-                        $tools_name = $_GET['tools_name'];
-                        $sql = "insert into tools (tls_name) values ('$tools_name')";
+                        $first_name = $_GET['first_name'];
+                        $last_name = $_GET['last_name'];
+                        $user_id = $_GET['user_id'];
+                        $user_password = $_GET['user_password'];
+                        $phone_number = $_GET['phone_number'];
+                        $sql = "insert into person (first_name,last_name,user_id,user_password,phone_number) values ('$first_name','$last_name','$user_id','$user_password','$phone_number')";
                         include 'connectdb.php';
                         mysqli_query($conn,$sql);
                         mysqli_close($conn);
-                        echo "เพิ่มเครื่องมือ $tools_name เรียบร้อยแล้ว<br>";
-                        echo '<a href="tools_list.php">แสดงเครื่องมือทั้งหมด</a>';
+                        echo "คุณได้ทำการสมัคร  $first_name . $last_name เรียบร้อยแล้ว<br>";
+                        echo '<a href="login.php">ไปหน้าล็อคอิน</a>';
                     }else{
                 ?>
-                    <form class="form-horizontal" role="form" name="tools_add" action="<?php echo $_SERVER['PHP_SELF']?>">
+                    <form class="form-horizontal" role="form" name="person" action="<?php echo $_SERVER['PHP_SELF']?>">
                         <div class="form-group">
-                            <label for="tools_name" class="col-md-2 col-lg-2 control-label">ชื่อเครื่องมือ</label>
+                            <label class="col-md-2 col-lg-2 control-label">ชื่อจริง</label>
                             <div class="col-md-10 col-lg-10">
-                                <input type="text" name="tools_name" id="tools_name" class="form-control">
+                                <input type="text" name="first_name" id="first_name" class="form-control">
+                            </div>    
+                        </div>
+                            <label class="col-md-2 col-lg-2 control-label">นามสกุล</label>
+                            <div class="col-md-10 col-lg-10">
+                                <input type="text" name="last_name" id="last_name" class="form-control">
+                            </div>    
+                        </div>
+                            <label class="col-md-2 col-lg-2 control-label">userผู้ใช้</label>
+                            <div class="col-md-10 col-lg-10">
+                                <input type="text" name="user_id" id="user_id" class="form-control">
+                            </div>    
+                        </div>
+                            <label class="col-md-2 col-lg-2 control-label">รหัสผ่าน</label>
+                            <div class="col-md-10 col-lg-10">
+                                <input type="text" name="user_password" id="user_password" class="form-control">
+                            </div>    
+                        </div>
+                            <label class="col-md-2 col-lg-2 control-label">เบอร์โทรศัพท์</label>
+                            <div class="col-md-10 col-lg-10">
+                                <input type="text" name="phone_number" id="phone_number" class="form-control">
                             </div>    
                         </div>
                         <div class="form-group">
